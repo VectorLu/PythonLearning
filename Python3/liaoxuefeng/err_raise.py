@@ -1,3 +1,4 @@
+# err_raise.py
 class FooError(ValueError):
     pass
 
