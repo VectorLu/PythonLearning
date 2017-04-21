@@ -1,3 +1,4 @@
+# mydict.py
 class Dict(dict):
 
     def __init__(self, **kw):
