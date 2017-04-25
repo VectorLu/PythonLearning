@@ -2,7 +2,10 @@ def checkIndex(key):
     """
     Is the given key an acceptable index?
 
-    To be acceptable, the key should be a non-negative integer. If it is not an integer, a TypeError is raised; if it is negative, an IndexError is raised (since the sequence is of infinite lenth).
+    To be acceptable, the key should be a non-negative integer.
+    If it is not an integer, a TypeError is raised;
+    if it is negative, an IndexError is raised
+    (since the sequence is of infinite lenth).
     """
     if not isinstance(key, (int, long)): raise TypeError
     if key < 0: raise IndexError
@@ -36,3 +39,12 @@ class ArithmeticSequence:
         """
         checkIndex(key)
         self.changed[key] = value
+
+if __name__ == '__main__':
+    s = ArithmeticSequence(1, 2)
+    print s[4]
+    s[4] = 2
+    print s[4]
+    print s[5]
+
+    del s[4]
