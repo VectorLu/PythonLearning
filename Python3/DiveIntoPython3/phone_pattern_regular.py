@@ -26,7 +26,7 @@ phone_pattern = re.compile(r'^\D*(\d{3})\D*(\d{3})\D*(\d{4})\D*(\d*)$')
 phone_pattern = re.compile(r'''
 	# don't match beginning of string,
 	# number can start anywhere
-	(\d{3})    # area code is 3 digit (e.g. '800')
+    (\d{3})    # area code is 3 digit (e.g. '800')
     \D*        # optional sperator is any number of non-digits
     (\d{3})    # trunk is 3 digit (e.g. '555')
     \D*        # optional sperator
