@@ -113,5 +113,9 @@ class FromRomanBadInput(unittest.TestCase):
                   'MCMC', 'XCX', 'IVI', 'LM', 'LD', 'LC'):
             self.assertRaises(roman.InvalidRomanNumeralError, roman.from_roman, s)
 
+    def test_blank(self):
+        '''from_roman should fail with blank string'''
+        self.assertRaises(roman.InvalidRomanNumeralError, roman.from_roman, '')
+
 if __name__ == '__main__':
     unittest.main()
